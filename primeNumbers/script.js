@@ -23,26 +23,16 @@
 
 // if (primeNumbersArray[i] divides into i then do not put it in primeNumbersArray)
 
-// var nextPrime = document.getElementById('nextPrime');
-// nextPrime.addEventListener('click', function(){
-//   var primeNumberArray = document.getElementById('currentPrimeNumber');
-//     for (i = 0; i < primeNumbersArray.length; i++) {
-//         primeNumberArray.innerHTML = primeNumbersArray[i];
-//     } 
-// });
-
-    
-
-
-
 var myIndex = 1;
 var currentPrimeNumber = document.getElementById('currentPrimeNumber');
 
 currentPrimeNumber.innerHTML = primeNumbersArray[0]; //Print first value of array right away.
+previousPrimeNumber.innerHTML = primeNumbersArray[0];
 
 function nextPrimeClick() {
   if (myIndex < primeNumbersArray.length) {
      currentPrimeNumber.innerHTML = primeNumbersArray[myIndex];
+     previousPrimeNumber.innerHTML = primeNumbersArray[myIndex - 1];
      myIndex++;
   }
   else {
