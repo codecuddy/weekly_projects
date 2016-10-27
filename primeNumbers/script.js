@@ -6,50 +6,25 @@
 
 
 
+// puts 1 to 8000 in an array
 
-
-// // while(var i = 0; i < primeArray.length)
-
-// var numbers = {
-//     compositeArray: [],
-//     primeArray: [1, 2, 3, 5, 7]
-    
-// };
-
-// // idea for first few button clicks
-// // first click return primeArray[0]... etc on primeArray[5] start loop
-
-
-// if (n % 2 == 0 || n % 3 == 0 || n % 5 == 0 || n % 7 == 0) {
-//   // push to compositeArray
-// } else {
-//   // push to primeArray
-//   // return last primeArray entry 
-//   // break
-// };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// puts 1 to 10 in an array
-
-var allNumbersArray = []
+var allNumbersArray = [0, 1]
 var primeNumbersArray = [2, 3, 5, 7]
-debugger;
-for (var i = 2; i < 1000; i++) {
+for (var i = 2; i < 100; i++) {
     allNumbersArray.push(i);
     if (i % 2 !== 0 && i % 3 !== 0 && i % 5 !== 0 && i % 7 !== 0) {
-        primeNumbersArray.push(i);    
+        primeNumbersArray.push(i);  
     }    
 }
+
+
+var primeNumberArray = document.getElementById('currentPrimeNumber');
+
+debugger;
+    for (i = 0; i < primeNumbersArray.length; i++) {
+        primeNumberArray.innerHTML = primeNumbersArray[i];
+    }
+
+
+// BUG: a prime * prime is being put into the primeNumbersArray --> obviously not a prime number
+// if primeNumbersArray[i*i] = # in primeNumbersArray then remove from primeNumbersArray
