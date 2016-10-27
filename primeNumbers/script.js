@@ -25,6 +25,7 @@
 
 var myIndex = 1;
 var currentPrimeNumber = document.getElementById('currentPrimeNumber');
+var previousPrimeNumber = document.getElementById('previousPrimeNumber');
 
 currentPrimeNumber.innerHTML = primeNumbersArray[0]; //Print first value of array right away.
 previousPrimeNumber.innerHTML = primeNumbersArray[0];
