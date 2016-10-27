@@ -8,22 +8,24 @@
 
 // puts 1 to 8000 in an array
 
-var allNumbersArray = [0, 1]
-var primeNumbersArray = [2, 3, 5, 7]
-for (var i = 2; i < 100; i++) {
-    allNumbersArray.push(i);
-    if (i % 2 !== 0 && i % 3 !== 0 && i % 5 !== 0 && i % 7 !== 0) {
+    var allNumbersArray = [0, 1]
+    var primeNumbersArray = [2, 3, 5, 7]
+        for (var i = 2; i < 100; i++) {
+        allNumbersArray.push(i);
+        if (i % 2 !== 0 && i % 3 !== 0 && i % 5 !== 0 && i % 7 !== 0) {
         primeNumbersArray.push(i);  
     }    
 }
 
-
-var primeNumberArray = document.getElementById('currentPrimeNumber');
-
-debugger;
+var nextPrime = document.getElementById('nextPrime');
+nextPrime.addEventListener('click', function(){
+   var primeNumberArray = document.getElementById('currentPrimeNumber');
     for (i = 0; i < primeNumbersArray.length; i++) {
         primeNumberArray.innerHTML = primeNumbersArray[i];
-    }
+    } 
+});
+
+    
 
 
 // BUG: a prime * prime is being put into the primeNumbersArray --> obviously not a prime number
