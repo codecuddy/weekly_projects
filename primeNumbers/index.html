@@ -3,21 +3,25 @@
 <html>
     <head>
         <title>Prime Numbers</title>
+        <link rel="stylesheet" href="style.css" type="text/css" />
     </head>
     
     <body>
 <!-- Goal: Have the program find prime numbers in order
     until the user chooses to stop asking for the next one. -->
         
-    <h1>First 1000 Prime Numbers</h1>
+    <h1 id="title">First 1000 Prime Numbers</h1>
      
      
-    <div>
-        <h3>Current Prime Number: <span id="currentPrimeNumber"></span> </h3>
-        <h3>Previous Prime Number: <span id="previousPrimeNumber"></span> </h3>
+    <div class="numberBox">
+        <h3 class="showNumber">Future Prime Number: <span id="futurePrimeNumber"></span> </h3>
+        <h3 class="showNumber">Current Prime Number:</br> <span id="currentPrimeNumber"></span> </h3>
+        <h3 class="showNumber">Previous Prime Number: <span id="previousPrimeNumber"></span> </h3>
     </div>
-    
-    <button id="nextPrime" onclick="nextPrimeClick();">Next Prime</button> 
+    </br>
+    <div id="nextPrimeButtonDiv">
+        <button id="nextPrime" onclick="nextPrimeClick();">Next Prime</button> 
+    </div>
     
     <script type="text/javascript" src="script.js"></script>
     </body>

@@ -1,0 +1,58 @@
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body { 
+    font-family: sans-serif; 
+    background-color: black;
+}
+
+#title {
+    color: #FFFFCC;
+    text-align: center;
+}
+
+.numberBox {
+  background: #FFFFCC;
+  text-align: center;
+}
+
+.showNumber {
+  display: inline-block;
+  width: 28%;
+  height: 200px;
+  margin-right: 10px;
+  background: #FF1A00;
+  counter-increment: showNumber;
+}
+
+.showNumber.is-selected {
+  background: #FF1A00;
+}
+
+.showNumber:before {
+  display: block;
+  text-align: center;
+  content: nextPrimeClick();
+  line-height: 200px;
+  font-size: 80px;
+  color: #FFFFCC;
+}
+
+#currentPrimeNumber {
+    font-size: 100px;
+    text-align: center;
+}
+
+#nextPrime {
+    width: 200px;
+    height: 80px;
+    display: inline-block;
+    font-size: 32px;
+    border-radius: 20px;
+}
+
+#nextPrimeButtonDiv {
+    text-align: center;
+}

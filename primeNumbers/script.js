@@ -26,14 +26,17 @@
 var myIndex = 1;
 var currentPrimeNumber = document.getElementById('currentPrimeNumber');
 var previousPrimeNumber = document.getElementById('previousPrimeNumber');
+var futurePrimeNumber = document.getElementById('futurePrimeNumber');
 
 currentPrimeNumber.innerHTML = primeNumbersArray[0]; //Print first value of array right away.
 previousPrimeNumber.innerHTML = primeNumbersArray[0];
+futurePrimeNumber.innerHTML = primeNumbersArray[1];
 
 function nextPrimeClick() {
   if (myIndex < primeNumbersArray.length) {
      currentPrimeNumber.innerHTML = primeNumbersArray[myIndex];
      previousPrimeNumber.innerHTML = primeNumbersArray[myIndex - 1];
+     futurePrimeNumber.innerHTML = primeNumbersArray[myIndex + 1];
      myIndex++;
   }
   else {
