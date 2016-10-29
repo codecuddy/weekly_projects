@@ -45,8 +45,7 @@ function nextPrimeClick() {
 };
 
 
-
-
+    
 
 
 // BUG: a prime * prime is being put into the primeNumbersArray --> obviously not a prime number

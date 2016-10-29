@@ -46,6 +46,7 @@ body {
 }
 
 #nextPrime {
+    color: white;
     width: 200px;
     height: 80px;
     display: inline-block;
