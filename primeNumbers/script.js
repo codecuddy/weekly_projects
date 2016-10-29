@@ -40,7 +40,7 @@ function nextPrimeClick() {
      myIndex++;
   }
   else {
-     currentPrimeNumber.innerHTML = "CONGRATS! You made it through first 1000 Prime Numbers! Your finger should be sore. Go outside and play!";   
+     currentPrimeNumber.innerHTML = "CONGRATS! You made it through first 1000 Prime Numbers!";   
   }
 };
 
