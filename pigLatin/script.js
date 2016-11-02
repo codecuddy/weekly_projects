@@ -5,18 +5,20 @@
 
 var pigLatin = {
   phrase: [],
-  translatePhrase: function(userPhraseText) {
+  addPhrase: function(userPhraseText) {
     this.phrase.push({
       userPhraseText: userPhraseText,   //first is property, second is param
     });
-  }
+  }, 
+  
+  
 };
 
 var handlers = {
-  translatePhrase: function() {
+  addPhrase: function() {
     var addPhraseToTranslate = document.getElementById('addPhraseToTranslate');
     if(addPhraseToTranslate.value !== '') {
-      pigLatin.translatePhrase(addPhraseToTranslate.value);
+      pigLatin.addPhrase(addPhraseToTranslate.value);
       addPhraseToTranslate.value = '';
       view.displayPigLatin();
     } else {
