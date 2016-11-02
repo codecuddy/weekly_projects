@@ -42,3 +42,8 @@ var view = {
     });
   }
 };
+
+
+
+//Next: Only have the most recent input appear on screen
+//Then: Start running input through a function to change to pig latin...
