@@ -5,9 +5,9 @@
 
 var pigLatin = {
   phrase: [],
-  translatePhrase: function(userPhrase) {
+  translatePhrase: function(userPhraseText) {
     this.phrase.push({
-      userPhrase: userPhrase,   //first is property, second is param
+      userPhraseText: userPhraseText,   //first is property, second is param
     });
   }
 };
@@ -33,7 +33,7 @@ var view = {
   
     pigLatin.phrase.forEach(function(userPhrase, position) {
         var pigLatinLi = document.createElement('li');
-        var displayPigLatinOnScreen = '';
+        var displayPigLatinOnScreen = userPhrase.userPhraseText;
         pigLatin.phrase;
       
         pigLatinLi.id = position;
