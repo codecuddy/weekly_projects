@@ -30,17 +30,10 @@ var handlers = {
 
 var view = {
   displayPigLatin: function() {
-    var pigLatinUl = document.querySelector('ul');
-    pigLatinUl.innerHTML = '';
-  
     pigLatin.phrase.forEach(function(userPhrase, position) {
-        var pigLatinLi = document.createElement('li');
-        var displayPigLatinOnScreen = userPhrase.userPhraseText;
-        pigLatin.phrase;
-      
-        pigLatinLi.id = position;
-        pigLatinLi.textContent = displayPigLatinOnScreen;
-        pigLatinUl.appendChild(pigLatinLi);
+        var showPigLatin = document.getElementById('showPigLatin');
+        showPigLatin.innerHTML = '';
+        showPigLatin.innerHTML += userPhrase.userPhraseText;
     });
   }
 };
