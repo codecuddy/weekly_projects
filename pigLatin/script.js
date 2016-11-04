@@ -7,11 +7,10 @@ var pigLatin = {
   phrase: [],
   addPhrase: function(userPhraseText) {
     this.phrase.push({
-      userPhraseText: userPhraseText,   //first is property, second is param
+      userPhraseText: userPhraseText,  //first is property, second is param
+      translated: false
     });
-  }, 
-  
-  
+  }
 };
 
 var handlers = {
@@ -20,25 +19,50 @@ var handlers = {
     if(addPhraseToTranslate.value !== '') {
       pigLatin.addPhrase(addPhraseToTranslate.value);
       addPhraseToTranslate.value = '';
+      view.displayOriginal();
       view.displayPigLatin();
     } else {
       alert("You didn't enter anything to translate!");
     }
   }
+  
+  //, translate: function(userPhraseText) {
+    // this.translated.push({
+    //     userPhraseText: userPhraseText,
+    //     translated: true
+    // })
+  //}
 };
 
 
 var view = {
+  displayOriginal: function() {
+    pigLatin.phrase.forEach(function(userPhrase, position) {
+        var showPigLatinBefore = document.getElementById('showPigLatinBefore');
+        showPigLatinBefore.innerHTML = '';
+        showPigLatinBefore.innerHTML += userPhrase.userPhraseText;
+    });
+  }, 
+  
   displayPigLatin: function() {
     pigLatin.phrase.forEach(function(userPhrase, position) {
-        var showPigLatin = document.getElementById('showPigLatin');
-        showPigLatin.innerHTML = '';
-        showPigLatin.innerHTML += userPhrase.userPhraseText;
-    });
+        var showPigLatinAfter = document.getElementById('showPigLatinAfter');
+        
+        showPigLatinAfter.innerHTML = '';
+        showPigLatinAfter.innerHTML += userPhrase.userPhraseText.substr(1) + "-" + userPhrase.userPhraseText.substring(0, 1) + "ay";
+        
+        // if (word starts with a non vowel) {
+        //     move the first letter to the end of the word and add "ay"
+        // } else (vowel) {
+        //     move the first letter to the end of the word and add "bay"
+        // }
+        
+    });  
   }
 };
 
 
 
-//Next: Only have the most recent input appear on screen
-//Then: Start running input through a function to change to pig latin...
+
+//Next: Apply the rules for words that start with vowels, etc. ...
+//Also: Apply the translation to more than one word entered at a time
