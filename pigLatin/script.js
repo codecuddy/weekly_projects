@@ -45,18 +45,22 @@ var view = {
   }, 
   
   displayPigLatin: function() {
-    pigLatin.phrase.forEach(function(userPhrase, position) {
+    pigLatin.phrase.forEach(function(userPhrase, position) { 
         var showPigLatinAfter = document.getElementById('showPigLatinAfter');
-        
         showPigLatinAfter.innerHTML = '';
-        showPigLatinAfter.innerHTML += userPhrase.userPhraseText.substr(1) + "-" + userPhrase.userPhraseText.substring(0, 1) + "ay";
-        
-        // if (word starts with a non vowel) {
-        //     move the first letter to the end of the word and add "ay"
-        // } else (vowel) {
-        //     move the first letter to the end of the word and add "bay"
-        // }
-        
+        if (userPhrase.userPhraseText.substring(0, 1) === 'a') {
+          showPigLatinAfter.innerHTML += userPhrase.userPhraseText.substr(1) + "-" + userPhrase.userPhraseText.substring(0, 1) + "aaaaaaaa";
+        } else if (userPhrase.userPhraseText.substring(0, 1) === 'e') {
+          showPigLatinAfter.innerHTML += userPhrase.userPhraseText.substr(1) + "-" + userPhrase.userPhraseText.substring(0, 1) + "eeeeeeee";
+        } else if (userPhrase.userPhraseText.substring(0, 1) === 'i') {
+          showPigLatinAfter.innerHTML += userPhrase.userPhraseText.substr(1) + "-" + userPhrase.userPhraseText.substring(0, 1) + "iiiiiiii";
+        } else if (userPhrase.userPhraseText.substring(0, 1) === 'o') {
+          showPigLatinAfter.innerHTML += userPhrase.userPhraseText.substr(1) + "-" + userPhrase.userPhraseText.substring(0, 1) + "ooooooo";
+        } else if (userPhrase.userPhraseText.substring(0, 1) === 'u') {
+          showPigLatinAfter.innerHTML += userPhrase.userPhraseText.substr(1) + "-" + userPhrase.userPhraseText.substring(0, 1) + "uuuuuuu";
+        } else {
+          showPigLatinAfter.innerHTML += userPhrase.userPhraseText.substr(1) + "-" + userPhrase.userPhraseText.substring(0, 1) + "EVERTYHING ELSE";
+        }
     });  
   }
 };
