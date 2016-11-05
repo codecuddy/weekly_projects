@@ -49,17 +49,17 @@ var view = {
         var showPigLatinAfter = document.getElementById('showPigLatinAfter');
         showPigLatinAfter.innerHTML = '';
         if (userPhrase.userPhraseText.substring(0, 1) === 'a') {
-          showPigLatinAfter.innerHTML += userPhrase.userPhraseText.substr(1) + "-" + userPhrase.userPhraseText.substring(0, 1) + "aaaaaaaa";
+          showPigLatinAfter.innerHTML += userPhrase.userPhraseText.substr(1) + "-" + userPhrase.userPhraseText.substring(0, 1) + "bay";
         } else if (userPhrase.userPhraseText.substring(0, 1) === 'e') {
-          showPigLatinAfter.innerHTML += userPhrase.userPhraseText.substr(1) + "-" + userPhrase.userPhraseText.substring(0, 1) + "eeeeeeee";
+          showPigLatinAfter.innerHTML += userPhrase.userPhraseText.substr(1) + "-" + userPhrase.userPhraseText.substring(0, 1) + "bay";
         } else if (userPhrase.userPhraseText.substring(0, 1) === 'i') {
-          showPigLatinAfter.innerHTML += userPhrase.userPhraseText.substr(1) + "-" + userPhrase.userPhraseText.substring(0, 1) + "iiiiiiii";
+          showPigLatinAfter.innerHTML += userPhrase.userPhraseText.substr(1) + "-" + userPhrase.userPhraseText.substring(0, 1) + "bay";
         } else if (userPhrase.userPhraseText.substring(0, 1) === 'o') {
-          showPigLatinAfter.innerHTML += userPhrase.userPhraseText.substr(1) + "-" + userPhrase.userPhraseText.substring(0, 1) + "ooooooo";
+          showPigLatinAfter.innerHTML += userPhrase.userPhraseText.substr(1) + "-" + userPhrase.userPhraseText.substring(0, 1) + "bay";
         } else if (userPhrase.userPhraseText.substring(0, 1) === 'u') {
-          showPigLatinAfter.innerHTML += userPhrase.userPhraseText.substr(1) + "-" + userPhrase.userPhraseText.substring(0, 1) + "uuuuuuu";
+          showPigLatinAfter.innerHTML += userPhrase.userPhraseText.substr(1) + "-" + userPhrase.userPhraseText.substring(0, 1) + "bay";
         } else {
-          showPigLatinAfter.innerHTML += userPhrase.userPhraseText.substr(1) + "-" + userPhrase.userPhraseText.substring(0, 1) + "EVERTYHING ELSE";
+          showPigLatinAfter.innerHTML += userPhrase.userPhraseText.substr(1) + "-" + userPhrase.userPhraseText.substring(0, 1) + "ay";
         }
     });  
   }
@@ -68,5 +68,5 @@ var view = {
 
 
 
-//Next: Apply the rules for words that start with vowels, etc. ...
-//Also: Apply the translation to more than one word entered at a time
+
+//Next: Apply the translation to more than one word entered at a time
