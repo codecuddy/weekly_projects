@@ -36,14 +36,18 @@ var view = {
     });
   }, 
   displayPigLatin: function() {
+    var splitPhrase = pigLatin.phrase[0].userPhraseText;
+    var splitArray = splitPhrase.split(' ');
     pigLatin.phrase.forEach(function(userPhrase, position) { 
         var showPigLatinAfter = document.getElementById('showPigLatinAfter');
-        var firstLetter = userPhrase.userPhraseText.substring(0, 1);
         showPigLatinAfter.innerHTML = '';
-        if (firstLetter === 'a' || firstLetter == 'e' || firstLetter == 'i' || firstLetter == 'o' || firstLetter == 'u') {
-          showPigLatinAfter.innerHTML += userPhrase.userPhraseText.substr(1) + "-" + userPhrase.userPhraseText.substring(0, 1) + "bay";
-        } else {
-          showPigLatinAfter.innerHTML += userPhrase.userPhraseText.substr(1) + "-" + userPhrase.userPhraseText.substring(0, 1) + "ay";
+        for(var i = 0; i < splitArray.length; i++) {
+          var firstLetter = splitArray[i].substring(0, 1);
+          if (firstLetter == 'a' || firstLetter == 'e' || firstLetter == 'i' || firstLetter == 'o' || firstLetter == 'u') {
+            showPigLatinAfter.innerHTML += splitArray[i].substr(1) + "-" + splitArray[i].substring(0, 1) + "bay ";
+          } else {
+            showPigLatinAfter.innerHTML += splitArray[i].substr(1) + "-" + splitArray[i].substring(0, 1) + "ay ";
+          }
         }
     });  
   }
@@ -53,4 +57,4 @@ var view = {
 
 
 
-//Next: Apply the translation to more than one word entered at a time
+//Next: needs to reset for next word/phrase
