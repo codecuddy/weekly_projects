@@ -8,7 +8,7 @@ var pigLatin = {
   addPhrase: function(userPhraseText) {
     this.phrase.push({
       userPhraseText: userPhraseText,  //first is property, second is param
-      translated: false
+      //translated: false
     });
   }
 };
@@ -25,15 +25,7 @@ var handlers = {
       alert("You didn't enter anything to translate!");
     }
   }
-  
-  //, translate: function(userPhraseText) {
-    // this.translated.push({
-    //     userPhraseText: userPhraseText,
-    //     translated: true
-    // })
-  //}
 };
-
 
 var view = {
   displayOriginal: function() {
@@ -43,20 +35,12 @@ var view = {
         showPigLatinBefore.innerHTML += userPhrase.userPhraseText;
     });
   }, 
-  
   displayPigLatin: function() {
     pigLatin.phrase.forEach(function(userPhrase, position) { 
         var showPigLatinAfter = document.getElementById('showPigLatinAfter');
+        var firstLetter = userPhrase.userPhraseText.substring(0, 1);
         showPigLatinAfter.innerHTML = '';
-        if (userPhrase.userPhraseText.substring(0, 1) === 'a') {
-          showPigLatinAfter.innerHTML += userPhrase.userPhraseText.substr(1) + "-" + userPhrase.userPhraseText.substring(0, 1) + "bay";
-        } else if (userPhrase.userPhraseText.substring(0, 1) === 'e') {
-          showPigLatinAfter.innerHTML += userPhrase.userPhraseText.substr(1) + "-" + userPhrase.userPhraseText.substring(0, 1) + "bay";
-        } else if (userPhrase.userPhraseText.substring(0, 1) === 'i') {
-          showPigLatinAfter.innerHTML += userPhrase.userPhraseText.substr(1) + "-" + userPhrase.userPhraseText.substring(0, 1) + "bay";
-        } else if (userPhrase.userPhraseText.substring(0, 1) === 'o') {
-          showPigLatinAfter.innerHTML += userPhrase.userPhraseText.substr(1) + "-" + userPhrase.userPhraseText.substring(0, 1) + "bay";
-        } else if (userPhrase.userPhraseText.substring(0, 1) === 'u') {
+        if (firstLetter === 'a' || firstLetter == 'e' || firstLetter == 'i' || firstLetter == 'o' || firstLetter == 'u') {
           showPigLatinAfter.innerHTML += userPhrase.userPhraseText.substr(1) + "-" + userPhrase.userPhraseText.substring(0, 1) + "bay";
         } else {
           showPigLatinAfter.innerHTML += userPhrase.userPhraseText.substr(1) + "-" + userPhrase.userPhraseText.substring(0, 1) + "ay";
