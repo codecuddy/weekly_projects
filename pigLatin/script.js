@@ -8,7 +8,6 @@ var pigLatin = {
   addPhrase: function(userPhraseText) {
     this.phrase.push({
       userPhraseText: userPhraseText,  //first is property, second is param
-      //translated: false
     });
   }
 };
@@ -36,7 +35,7 @@ var view = {
     });
   }, 
   displayPigLatin: function() {
-    var splitPhrase = pigLatin.phrase[0].userPhraseText;
+    var splitPhrase = pigLatin.phrase[pigLatin.phrase.length - 1].userPhraseText;
     var splitArray = splitPhrase.split(' ');
     pigLatin.phrase.forEach(function(userPhrase, position) { 
         var showPigLatinAfter = document.getElementById('showPigLatinAfter');
@@ -57,4 +56,4 @@ var view = {
 
 
 
-//Next: needs to reset for next word/phrase
+//Next: account/delete for special characters
