@@ -48,6 +48,7 @@ var view = {
           }
         } else {
           for(var j = 0; j < splitArray.length; j++) {
+            var firstLetter = splitArray[j].substring(0, 1);
             if (firstLetter == 'a' || firstLetter == 'e' || firstLetter == 'i' || firstLetter == 'o' || firstLetter == 'u') {
               showPigLatinAfter.innerHTML += splitArray[j].substr(1) + splitArray[j].substring(0, 1) + "bay ";
             } else {
