@@ -7,7 +7,7 @@ var pigLatin = {
   phrase: [],
   addPhrase: function(userPhraseText) {
     this.phrase.push({
-      userPhraseText: userPhraseText,  //first is property, second is param
+      userPhraseText: userPhraseText.toLowerCase(),  //first is property, second is param
     });
   }
 };
