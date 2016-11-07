@@ -29,18 +29,30 @@ var view = {
         showPigLatinBefore.innerHTML += userPhrase.userPhraseText;
     });
   }, 
-  displayPigLatin: function() {
+  displayPigLatin: function() {debugger;
     var splitPhrase = pigLatin.phrase[pigLatin.phrase.length - 1].userPhraseText;
     var splitArray = splitPhrase.split(' ');
     pigLatin.phrase.forEach(function(userPhrase, position) { 
         var showPigLatinAfter = document.getElementById('showPigLatinAfter');
+        var easyToReadTranslation = document.getElementById('easyToReadTranslation');
         showPigLatinAfter.innerHTML = '';
-        for(var i = 0; i < splitArray.length; i++) {
-          var firstLetter = splitArray[i].substring(0, 1);
-          if (firstLetter == 'a' || firstLetter == 'e' || firstLetter == 'i' || firstLetter == 'o' || firstLetter == 'u') {
-            showPigLatinAfter.innerHTML += splitArray[i].substr(1) + "-" + splitArray[i].substring(0, 1) + "bay ";
-          } else {
-            showPigLatinAfter.innerHTML += splitArray[i].substr(1) + "-" + splitArray[i].substring(0, 1) + "ay ";
+        
+        if(easyToReadTranslation.checked === true) {
+          for(var i = 0; i < splitArray.length; i++) {
+            var firstLetter = splitArray[i].substring(0, 1);
+            if (firstLetter == 'a' || firstLetter == 'e' || firstLetter == 'i' || firstLetter == 'o' || firstLetter == 'u') {
+              showPigLatinAfter.innerHTML += splitArray[i].substr(1) + "-" + splitArray[i].substring(0, 1) + "bay ";
+            } else {
+              showPigLatinAfter.innerHTML += splitArray[i].substr(1) + "-" + splitArray[i].substring(0, 1) + "ay ";
+            }
+          }
+        } else {
+          for(var j = 0; j < splitArray.length; j++) {
+            if (firstLetter == 'a' || firstLetter == 'e' || firstLetter == 'i' || firstLetter == 'o' || firstLetter == 'u') {
+              showPigLatinAfter.innerHTML += splitArray[j].substr(1) + splitArray[j].substring(0, 1) + "bay ";
+            } else {
+              showPigLatinAfter.innerHTML += splitArray[j].substr(1) + splitArray[j].substring(0, 1) + "ay ";
+            }
           }
         }
     });  
