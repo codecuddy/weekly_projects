@@ -1,4 +1,26 @@
-h1 {
-    font-size: 150px;
+body {
+    background-color: black;
+}
+
+.header {
+    color: silver;
+}
+.jumbotron {
+    text-align: center;
+}
+
+.showPi {
+    font-size: 36px;
     color: red;
+}
+
+.footer {
+    text-align: center;
+    font-size: 16px;
+    margin: 25px;
+    color: silver;
+}
+
+a {
+    color: silver;
 }

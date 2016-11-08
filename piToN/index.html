@@ -13,18 +13,21 @@
         
     <div class="container">
         <div class="header">
-            <h3>Pi to the nth Digit</h3>
+            <h3>Pi to the n<sup>th</sup> Digit</h3>
         </div>
         <div class="jumbotron">
-            <h1 id="title">Slice of Pi</h1>
+            <h2 id="title">Slice of Pi</h2>
             <h3>To Which Number Would You Like To Round Pi?</h3>
             <small>[Between 1 and 16 digits]</small></br>
             <input type="number" name="quantity" id="nthDigitOfPi" min="1" max="16">
-            <div id="showPi">
+            <div id="showPi" class="showPi">
             </div>  
         </div><!-- .jumbotron -->
     </div><!-- .container --->
-    
+    <hr>
+    <div class="footer">
+        <p>&#169 <a href="https://github.com/codecuddy">Charlie Cuddy</a></p>
+    </div>
     
     <script type="text/javascript" src="script.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
