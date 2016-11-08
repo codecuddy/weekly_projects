@@ -3,17 +3,27 @@
 <html lang="en">
     <head>
         <title>Slice of Pi</title>
-        <link rel="stylesheet" type="text/css" href="style.css">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     
     <body>
         
-    <div id="container">
-        <h1 id="title">Slice of Pi</h1>
-    </div><!-- container --->
+    <div class="container">
+        <div class="header">
+            <h3>Pi to the nth Digit</h3>
+        </div>
+        <div class="jumbotron">
+            <h1 id="title">Slice of Pi</h1>
+            <h3>To Which Number Would You Like To Round Pi?</h3>
+            <small>[Between 1 and 16 digits]</small></br>
+            <input type="number" name="quantity" id="nthDigitOfPi" min="1" max="16">
+            <div id="showPi">
+            </div>  
+        </div><!-- .jumbotron -->
+    </div><!-- .container --->
     
     
     <script type="text/javascript" src="script.js"></script>
