@@ -5,6 +5,7 @@ body {
 
 #container {
     text-align: center;
+    width: 100%;
 }
 
 #addPhraseToTranslate {
@@ -20,6 +21,7 @@ button {
 
 .phrases {
     text-align: center;
+    height: 60px;
 }
 
 
