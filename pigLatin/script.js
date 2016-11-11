@@ -29,7 +29,7 @@ var view = {
         showPigLatinBefore.innerHTML += userPhrase.userPhraseText;
     });
   }, 
-  displayPigLatin: function() {debugger;
+  displayPigLatin: function() {
     var splitPhrase = pigLatin.phrase[pigLatin.phrase.length - 1].userPhraseText;
     var splitArray = splitPhrase.split(' ');
     pigLatin.phrase.forEach(function(userPhrase, position) { 
