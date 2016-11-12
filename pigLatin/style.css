@@ -1,9 +1,13 @@
 body {
-    background-color: grey;
+    background-color: silver;
     color: navy;
 }
 
-#container {
+.jumbotron {
+    background-color: silver;
+}
+
+.container {
     text-align: center;
     width: 100%;
 }
@@ -13,16 +17,9 @@ body {
     color: silver;    
 }
 
-button {
-    border-radius: 10px;
-    color: navy;
-    background-color: silver;
-}
-
 .phrases {
     text-align: center;
 }
-
 
 #showPigLatinAfter, #showPigLatinBefore {
     color: white;
@@ -39,5 +36,9 @@ button {
 }
 
 a {
-    color: silver;
+    color: navy;
+}
+
+hr {
+    border: .8px solid navy;
 }
