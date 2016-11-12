@@ -2,11 +2,10 @@ function decimalOfPi(){
         var pi = Math.PI;
         var piLocation = document.getElementById('showPi');
         var nthDigitOfPi = document.getElementById('nthDigitOfPi');
-        piLocation.innerHTML = pi.toFixed(nthDigitOfPi.value.round);
+        piLocation.innerHTML = pi.toFixed(nthDigitOfPi.value);
     }   
 
 //Things to Improve: 
-//Round the Decimal
 //Use longer decimal as shown below
     //code below will show the nth term but nothing before it
 
