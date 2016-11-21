@@ -18,3 +18,14 @@ var handlers = {
         }
     }
 };
+
+// var view = {
+//     displayEntries: function() {
+//         numbers.numbersArray.forEach(function(numbersEntered){
+//             var displayNumbers = document.getElementById('outputs');
+//             outputs.innerHTML='';
+//             outputs.innerHTML += numbersEntered.numbersEntered;
+//         })
+//     }
+// };
+
