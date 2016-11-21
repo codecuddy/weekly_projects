@@ -1,0 +1,21 @@
+body {
+    background-color: navy;
+    color: gold;
+}
+
+.jumbotron {
+    text-align: center;
+    background-color: gold;
+    color: navy;
+}
+
+.footer {
+    text-align: center;
+    font-size: 16px;
+    margin: 25px;
+    color: gold;
+}
+
+.footer a {
+    color: gold;
+}

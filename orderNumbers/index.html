@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>Put the Numbers in Order</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    
+    
+    <body>
+        <div class="container">
+            <div class="header">
+                <h2>Order the Numbers</h2>
+            </div><!-- header -->
+            
+            <div class="jumbotron">
+                <h2>Please Enter Your List of Numbers Below</h2>
+                <h4>Seperate Each Number With a Comma [Example: 7, 3, 10]</h4></br>
+                <div class="inputs">
+                    <input id="numbersToBeOrdered" type="text" placeholder="Enter Numbers Here">
+                    <button type="submit" value="submit" onclick="handlers.submitOrder()">Submit</button></br></br>
+                    <form>
+                        <input type="radio" name="order" value="lowToHigh" checked> Lowest to Highest</br>
+                        <input type="radio" name="order" value"highToLow"> Highest to Lowest</br>
+                    </form>
+                </div><!-- inputs -->
+                <div class="outputs">
+                        
+                </div><!-- outputs -->
+            </div><!-- jumbotron -->
+        </div><!-- container -->
+        </br><hr>
+        <div class="footer">
+        <p>&#169 <a href="https://github.com/codecuddy">Charlie Cuddy</a></p>
+    </div>
+    
+    
+    
+    
+    <script type="text/javascript" src="script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+    </body>
+</html>
