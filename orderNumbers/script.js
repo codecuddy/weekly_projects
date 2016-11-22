@@ -1,10 +1,15 @@
 var numbers = {
     numbersArray: [],
     inputNumber: function(numbersEntered) {
+        var checkForNumber = document.getElementById('numbersToBeOrdered').value;
+        if ((checkForNumber%1) != 0) {
+            alert ("Must Enter Only Numbers");
+            return false;
+        }
         this.numbersArray.push({
            numbersEntered: numbersEntered
         });
-    }
+    } 
 };
 
 var handlers = {
@@ -14,7 +19,7 @@ var handlers = {
         numbers.inputNumber(numbersToBeOrdered.value);
         numbersToBeOrdered.value='';
         } else {
-            alert("You Did Not Enter Any Numbers")
+            alert("You Did Not Enter Any Numbers");
         }
     }
 };
@@ -28,4 +33,5 @@ var handlers = {
 //         })
 //     }
 // };
+
 
