@@ -3,7 +3,7 @@ var numbers = {
     inputNumber: function(numbersEntered) {
         var checkForNumber = document.getElementById('numbersToBeOrdered').value;
         if ((checkForNumber%1) != 0) {
-            alert ("Must Enter Only Numbers");
+            alert ("Please Enter Only Numbers to Be Ordered");
             return false;
         }
         this.numbersArray.push({
