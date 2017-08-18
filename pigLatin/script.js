@@ -8,7 +8,7 @@ var pigLatin = {
 };
 
 var handlers = {
-  addPhrase: function() {
+  addPhrase: function() {debugger;
     var addPhraseToTranslate = document.getElementById('addPhraseToTranslate');
     if(addPhraseToTranslate.value !== '') {
       pigLatin.addPhrase(addPhraseToTranslate.value);
